@@ -1,0 +1,76 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.section-game {
+  margin: 3rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  cursor: pointer;
+}
+
+.box {
+  border: 1px solid black;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* remove highlight */
+::-moz-selection {
+  background-color: transparent;
+  color: #000;
+}
+::selection {
+  background-color: transparent;
+  color: #000;
+}
+
+.scoreboard-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.scoreboard-section p {
+  border: black solid 1px;
+  padding: 0.5rem;
+}
+
+.replay-menu {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 3rem;
+  background-color: #8d3f00e1;
+  border-radius: 10px;
+  color: white;
+}
+
+.show-menu {
+  display: flex;
+}
+
+.lose-bg-color {
+  background-color: #b90c00cb;
+}
+.win-bg-color {
+  background-color: #166e00e1;
+}
