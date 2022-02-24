@@ -113,7 +113,6 @@ const minMaxAlgorithm = (newBoard, player) => {
 
 const AiChoose = () => {
   const prova = minMaxAlgorithm(currentBoard(), AiPlayer);
-  console.log("risultato:", prova);
   return prova.index;
 };
 
