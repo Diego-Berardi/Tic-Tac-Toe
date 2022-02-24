@@ -9,6 +9,8 @@ const replayBtn_button = document.querySelector(".replay-btn");
 const huPlayer = "x";
 const AiPlayer = "0";
 
+let gameState = true;
+
 const winCombos = [
   [0, 1, 2],
   [3, 4, 5],
@@ -28,6 +30,7 @@ const currentBoard = () => {
 };
 
 const gameOver = ({ winCombo, player }) => {
+  gameState = false;
   if (winCombo) {
     winCombo.forEach((elem) => {
       boxs_div[elem].classList.add("win-bg-color");
@@ -122,6 +125,7 @@ const checkEnd = (board) => {
 };
 
 const handleClick = (e) => {
+  if (!gameState) return;
   if (e.target.textContent !== "") return;
   draw(e.target.id, huPlayer);
   const huResult = checkWin(currentBoard(), huPlayer);
@@ -140,6 +144,7 @@ const handleClick = (e) => {
 };
 
 const replayGame = () => {
+  gameState = true;
   boxs_div.forEach((elem) => {
     elem.textContent = "";
     elem.classList.remove("win-bg-color");

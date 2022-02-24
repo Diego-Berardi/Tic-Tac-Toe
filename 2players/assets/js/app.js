@@ -10,7 +10,10 @@ let index = 0;
 let xUser = 0;
 let oUser = 0;
 
+let gameState = true;
+
 const endGame = (user) => {
+  gameState = false;
   if (user === "x") {
     xUser_span.textContent = ++xUser;
     resultText_p.textContent = "x win";
@@ -72,6 +75,7 @@ const checkWin = () => {
 };
 
 const handleClick = (e) => {
+  if (!gameState) return;
   if (e.target.textContent !== "") return;
   if (index % 2 === 0) {
     e.target.textContent = "x";
@@ -80,10 +84,11 @@ const handleClick = (e) => {
   }
   index++;
   checkWin();
-  checkIfEnd();
+  if (gameState) checkIfEnd();
 };
 
 const resetBoard = () => {
+  gameState = true;
   boxs_div.forEach((e) => (e.textContent = ""));
   index = 0;
   replayMenu_div.classList.remove("show-menu");
