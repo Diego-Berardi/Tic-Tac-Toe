@@ -16,13 +16,13 @@ const endGame = (user) => {
   gameState = false;
   if (user === "X") {
     xUser_span.textContent = ++xUser;
-    resultText_p.textContent = "You broke the game";
+    resultText_p.textContent = "X user win";
     replayMenu_div.classList.remove("lose-bg-color");
     replayMenu_div.classList.add("win-bg-color");
   }
   if (user === "O") {
     oUser_span.textContent = ++oUser;
-    resultText_p.textContent = "You lose";
+    resultText_p.textContent = "O user win";
     replayMenu_div.classList.remove("win-bg-color");
     replayMenu_div.classList.add("lose-bg-color");
   }

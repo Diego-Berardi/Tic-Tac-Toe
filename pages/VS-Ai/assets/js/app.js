@@ -35,7 +35,8 @@ const gameOver = ({ winCombo, player }) => {
     winCombo.forEach((elem) => {
       boxs_div[elem].classList.add("win-bg-color");
     });
-    resultText_p.textContent = player == huPlayer ? "You win" : "You lose";
+    resultText_p.textContent =
+      player == huPlayer ? "You broke the game" : "You lose";
     if (player == huPlayer) {
       xUser_span.textContent++;
     } else {
