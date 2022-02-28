@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  background-color: #181818;
+  color: white;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 4rem 0;
+  gap: 3rem;
+}
+
+main div {
+  display: flex;
+  gap: 2rem;
+}
+
+div a {
+  color: white;
+  border: solid white 1px;
+  border-radius: 10px;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: background-color 100ms ease-in-out, color 100ms ease-in-out;
+}
+
+div a:hover {
+  background-color: white;
+  color: black;
+}
+
+
+.unselectable {
+   -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+
+   -ms-user-select: none;
+   user-select: none;
+}

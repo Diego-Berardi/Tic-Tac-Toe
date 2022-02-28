@@ -6,8 +6,8 @@ const replayMenu_div = document.querySelector(".replay-menu");
 const resultText_p = document.querySelector(".result-text");
 const replayBtn_button = document.querySelector(".replay-btn");
 
-const huPlayer = "x";
-const AiPlayer = "0";
+const huPlayer = "X";
+const AiPlayer = "O";
 
 let gameState = true;
 
@@ -36,6 +36,8 @@ const gameOver = ({ winCombo, player }) => {
       boxs_div[elem].classList.add("win-bg-color");
     });
     resultText_p.textContent = player == huPlayer ? "You win" : "You lose";
+    if (player == huPlayer) xUser_span.textContent++;
+    else oUser_span.textContent++;
   } else {
     resultText_p.textContent = "No winner";
   }

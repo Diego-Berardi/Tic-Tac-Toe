@@ -14,13 +14,13 @@ let gameState = true;
 
 const endGame = (user) => {
   gameState = false;
-  if (user === "x") {
+  if (user === "X") {
     xUser_span.textContent = ++xUser;
     resultText_p.textContent = "x win";
     replayMenu_div.classList.remove("lose-bg-color");
     replayMenu_div.classList.add("win-bg-color");
   }
-  if (user === "o") {
+  if (user === "O") {
     oUser_span.textContent = ++oUser;
     resultText_p.textContent = "o win";
     replayMenu_div.classList.remove("win-bg-color");
@@ -78,9 +78,9 @@ const handleClick = (e) => {
   if (!gameState) return;
   if (e.target.textContent !== "") return;
   if (index % 2 === 0) {
-    e.target.textContent = "x";
+    e.target.textContent = "X";
   } else {
-    e.target.textContent = "o";
+    e.target.textContent = "O";
   }
   index++;
   checkWin();
