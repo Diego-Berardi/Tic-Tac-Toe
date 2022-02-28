@@ -51,6 +51,9 @@ main {
   padding: 0.5rem 1rem;
 }
 
+.replay-menu button {
+  padding:  0.3rem .7rem ;
+}
 .replay-menu {
   display: none;
   position: absolute;
@@ -73,14 +76,13 @@ main {
   background-color: #166e00e1;
 }
 
-
 .unselectable {
-   -moz-user-select: none;
-   -khtml-user-select: none;
-   -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
 
-   -ms-user-select: none;
-   user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .go-back-div {

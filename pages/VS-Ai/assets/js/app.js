@@ -36,10 +36,15 @@ const gameOver = ({ winCombo, player }) => {
       boxs_div[elem].classList.add("win-bg-color");
     });
     resultText_p.textContent = player == huPlayer ? "You win" : "You lose";
-    if (player == huPlayer) xUser_span.textContent++;
-    else oUser_span.textContent++;
+    if (player == huPlayer) {
+      xUser_span.textContent++;
+    } else {
+      oUser_span.textContent++;
+      replayMenu_div.classList.add("lose-bg-color");
+    }
   } else {
     resultText_p.textContent = "No winner";
+    replayMenu_div.classList.remove("lose-bg-color");
   }
   replayMenu_div.classList.add("show-menu");
 };
