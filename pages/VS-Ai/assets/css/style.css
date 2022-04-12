@@ -26,15 +26,16 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   cursor: pointer;
+  font-weight: 700;
+  font-size: 3rem;
 }
 .box {
   border: 1px solid white;
-  width: 5rem;
-  height: 5rem;
+  width: 6rem;
+  height: 6rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
 }
 
 .scoreboard-section {
@@ -52,7 +53,7 @@ main {
 }
 
 .replay-menu button {
-  padding:  0.3rem .7rem ;
+  padding: 0.3rem 0.7rem;
 }
 .replay-menu {
   display: none;

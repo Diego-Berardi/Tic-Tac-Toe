@@ -20,21 +20,23 @@ main {
   justify-content: center;
   flex-direction: column;
 }
+
 .section-game {
   margin: 3rem 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   cursor: pointer;
+  font-weight: 700;
+  font-size: 3rem;
 }
 
 .box {
   border: 1px solid white;
-  width: 5rem;
-  height: 5rem;
+  width: 6rem;
+  height: 6rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
 }
 
 .scoreboard-section {
